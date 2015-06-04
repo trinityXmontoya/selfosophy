@@ -1,0 +1,29 @@
+<head>
+  <title>selfie</title>
+</head>
+
+<body>
+  <h1>Bama Knows How You Feel</h1>
+
+  {{> selfie}}
+	<br>
+  {{> gallery}}
+</body>
+
+<template name="selfie">
+  <button id="snap-photo">Snap!</button>
+  {{#if currentImage}}
+  	<br>
+  	<img id="capturedPhoto" src="{{currentImage}}">
+  	<br>
+  	<button id="add-to-gallery">Add To Gallery</button>
+  {{/if}}
+</template>
+
+<template name="gallery">
+	Gallery:
+	<br>
+	{{#each galleryImages}}
+		<img src="{{src}}" style="height:100px">
+	{{/each}}
+</template>

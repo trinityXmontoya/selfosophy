@@ -1,0 +1,1 @@
+http://selfosophy.meteor.com/

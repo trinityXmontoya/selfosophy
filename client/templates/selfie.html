@@ -21,9 +21,11 @@
 </template>
 
 <template name="gallery">
-	Gallery:
-	<br>
-	{{#each galleryImages}}
-		<img src="{{src}}" style="height:100px">
-	{{/each}}
+	{{#if galleryImages}}
+		Gallery:
+		<br>
+		{{#each galleryImages}}
+			<img src="{{src}}" style="height:150px">
+		{{/each}}
+	{{/if}}
 </template>

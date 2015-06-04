@@ -9,9 +9,10 @@ if Meteor.isClient
         photo = new Image()
         photo.src = data
         barack = new Image()
+        barack.onload = ()->
+          ctx.drawImage(barack,0,115.8,97.8,124.2)
         barack.src = "images/bama.png"
         ctx.drawImage(photo, 0,0, 320, 240)
-        ctx.drawImage(barack,0,115.8,97.8,124.2)
     )
     return
 
